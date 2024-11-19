@@ -19,3 +19,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.pizza-background {
+  background-color: #f0f0f0 !important;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+.pizza-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/image/pizza.svg') !important;
+  background-size: 128px !important;
+  background-repeat: repeat !important;
+  background-position: center !important;
+  opacity: 0.3;
+  z-index: -1;
+}

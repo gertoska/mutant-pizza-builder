@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Mutant Pizza Builder
 
-## Getting Started
+An interactive web app that combines pizza creation with mutation testing education. Build your perfect pizza while learning software testing concepts!
 
-First, run the development server:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Fmutant-pizza-builder)
+[![Tests](https://github.com/your-username/mutant-pizza-builder/actions/workflows/tests.yml/badge.svg)](https://github.com/your-username/mutant-pizza-builder/actions)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyour-username%2Fmutant-pizza-builder%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/your-username/mutant-pizza-builder/main)
+
+[🚀 Demo](https://mutant-pizza-builder.vercel.app) | [📖 Documentation](docs/README.md) | [🐛 Issues](https://github.com/your-username/mutant-pizza-builder/issues)
+
+![Pizza Builder Demo](public/demo.gif)
+
+## ✨ Features
+
+- 🛠️ **Interactive Pizza Builder**
+  - Multiple crust options (thin, thick, stuffed)
+  - Extensive topping selection
+  - Real-time price calculation
+  - Visual pizza preview
+
+- 📚 **Learn Mutation Testing**
+  - Built-in examples of mutation testing concepts
+  - Interactive tutorials and explanations
+  - Real-world testing scenarios
+
+- 💻 **Developer Experience**
+  - 100% TypeScript coverage
+  - Comprehensive test suite
+  - Modern tooling and best practices
+
+## 🚀 Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/mutant-pizza-builder.git
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to start building your pizza!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Run unit tests
+npm test
 
-## Learn More
+# Run tests with coverage
+npm run test:coverage
 
-To learn more about Next.js, take a look at the following resources:
+# Run mutation tests
+npm run test:mutation
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Testing**: Jest, React Testing Library, Stryker
+- **Deployment**: Vercel
+- **Quality**: ESLint, Prettier
 
-## Deploy on Vercel
+## 📖 Mutation Testing Guide
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Mutation testing helps ensure your test suite's effectiveness by introducing small code changes ("mutants") and verifying if your tests catch them. Learn more:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Introduction to Mutation Testing](docs/mutation-testing.md)
+- [Example Mutations](docs/example-mutations.md)
+- [Testing Best Practices](docs/testing-practices.md)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Pizza vector images by [Vecteezy](https://www.vecteezy.com)
+- Inspired by Josh Goldberg's work on mutation testing and the [RoboCafe example](https://github.com/JoshuaKGoldberg/robocafe-example)
+- Built with ❤️ by [gertoska](https://github.com/gertoska)
