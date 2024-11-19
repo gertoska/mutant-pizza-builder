@@ -2,11 +2,11 @@
 
 An interactive web app that combines pizza creation with mutation testing education. Build your perfect pizza while learning software testing concepts!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Fmutant-pizza-builder)
-[![Tests](https://github.com/your-username/mutant-pizza-builder/actions/workflows/tests.yml/badge.svg)](https://github.com/your-username/mutant-pizza-builder/actions)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyour-username%2Fmutant-pizza-builder%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/your-username/mutant-pizza-builder/main)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgertoska%2Fmutant-pizza-builder)
+[![Tests](https://github.com/gertoska/mutant-pizza-builder/actions/workflows/ci.yml/badge.svg)](https://github.com/gertoska/mutant-pizza-builder/actions/workflows/ci.yml)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fgertoska%2Fmutant-pizza-builder%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/gertoska/mutant-pizza-builder/main)
 
-[🚀 Demo](https://mutant-pizza-builder.vercel.app) | [📖 Documentation](docs/README.md) | [🐛 Issues](https://github.com/your-username/mutant-pizza-builder/issues)
+[🚀 Demo](https://mutant-pizza-builder.vercel.app) | [📖 Documentation](docs/README.md) | [🐛 Issues](https://github.com/gertoska/mutant-pizza-builder/issues)
 
 ![Pizza Builder Demo](public/demo.gif)
 
@@ -32,7 +32,7 @@ An interactive web app that combines pizza creation with mutation testing educat
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/mutant-pizza-builder.git
+git clone https://github.com/gertoska/mutant-pizza-builder.git
 
 # Install dependencies
 npm install

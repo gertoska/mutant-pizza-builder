@@ -11,8 +11,8 @@ export default function Summary() {
   const price = searchParams.get('price')
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-yellow-50/50 p-4">
-      <h1 className="text-3xl font-bold text-red-600 mb-8">Your Pizza Summary</h1>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-yellow-50/50">
+      <h1 className="text-4xl font-bold text-red-600 mb-8">Your Pizza Summary</h1>
       <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
         <div className="mb-4">
           <h2 className="text-xl font-semibold mb-2">Crust:</h2>
@@ -30,11 +30,11 @@ export default function Summary() {
         </div>
         <div className="text-xl font-bold mb-6">Total Price: ${Number(price).toFixed(2)}</div>
         <Link href="/builder">
-          <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
+          <Button className="w-full bg-green-500 hover:bg-green-600">
             Build Another Pizza
           </Button>
         </Link>
       </div>
-    </div>
+    </main>
   )
 }
