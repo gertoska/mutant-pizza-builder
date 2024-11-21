@@ -6,8 +6,8 @@ on:
     branches: [main]
 
 jobs:
-  test-and-sonar:
-    name: Test and SonarCloud Scan
+  test-and-analysis:
+    name: Tests, SonarCloud, and Mutation Analysis
     runs-on: ubuntu-latest
     
     steps:
@@ -24,7 +24,12 @@ jobs:
         run: npm ci
         
       - name: Run tests with coverage
-        run: npm run test:coverage
+        run: npm run test:coverage -- --coverageReporter=lcov
+        
+      - name: Run mutation tests
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
+        run: npm run test:mutation
 
       - name: SonarQube Cloud Scan
         uses: SonarSource/sonarcloud-github-action@master

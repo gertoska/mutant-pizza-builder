@@ -13,7 +13,7 @@ export default function Builder() {
   const [crust, setCrust] = useState(CRUSTS[0])
   const router = useRouter()
 
-  const calculatePrice = () => {
+  const calculatePrices = () => {
     const toppingCount = Object.values(toppings).filter(Boolean).length
     const basePrice = CRUST_PRICES[crust as keyof typeof CRUST_PRICES] + toppingCount * TOPPING_PRICE
     
@@ -22,7 +22,15 @@ export default function Builder() {
       discount = 0.05
     }
     
-    return Number((basePrice * (1 - discount)).toFixed(2))
+    if (toppings['peppers'] && toppings['mushrooms']) {
+      discount += 0.05
+    }
+    
+    return {
+      original: Number(basePrice.toFixed(2)),
+      final: Number((basePrice * (1 - discount)).toFixed(2)),
+      hasDiscount: discount > 0
+    }
   }
 
   const handleToppingChange = (topping: string) => {
@@ -47,13 +55,17 @@ export default function Builder() {
     }
 
     router.push(
-      `/summary?crust=${crust}&toppings=${selectedToppings.join(',')}&price=${calculatePrice()}`
+      `/summary?crust=${crust}&toppings=${selectedToppings.join(',')}&price=${calculatePrices().final}`
     )
   }
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-yellow-50/50">
       <h1 className="text-4xl font-bold text-red-600 mb-8">Build Your Pizza</h1>
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4 max-w-md">
+        <strong className="font-bold">Special Offer!</strong>
+        <p className="block sm:inline"> Get 5% off when you combine peppers and mushrooms on your pizza! 🫑🍄</p>
+      </div>
       <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-xl font-semibold mb-4">Choose your crust:</h2>
         <RadioGroup value={crust} onValueChange={setCrust} className="mb-6">
@@ -81,7 +93,16 @@ export default function Builder() {
           ))}
         </div>
 
-        <div className="text-xl font-bold mb-6">Price: ${calculatePrice().toFixed(2)}</div>
+        <div className="text-xl font-bold mb-6">
+          {calculatePrices().hasDiscount ? (
+            <div>Price:
+              <span className="line-through text-gray-500 ml-2">${calculatePrices().original.toFixed(2)}</span>
+              <span className="ml-2 text-green-600">${calculatePrices().final.toFixed(2)}</span>
+            </div>
+          ) : (
+            <div>Price: ${calculatePrices().final.toFixed(2)}</div>
+          )}
+        </div>
 
         <Button 
           onClick={handleSubmit} 

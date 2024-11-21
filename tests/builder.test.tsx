@@ -20,11 +20,11 @@ describe('Builder Page', () => {
   it('applies correct discount tiers based on topping count', () => {
     render(<Builder />)
     
-    const fourToppings = ['pepperoni', 'cheese', 'mushrooms', 'olives']
+    const fourToppings = ['pepperoni', 'cheese', 'mushrooms', 'peppers']
     fourToppings.forEach(topping => {
       fireEvent.click(screen.getByLabelText(topping, { exact: false }))
     })
-    expect(screen.getByText('Price: $13.30')).toBeInTheDocument()
+    expect(screen.getByText('$12.60')).toBeInTheDocument()
   })
 
   it('shows alert when selecting pineapple', () => {
