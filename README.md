@@ -13,12 +13,10 @@ An interactive web app that combines pizza creation with mutation testing educat
   - Multiple crust options (thin, thick, stuffed)
   - Extensive topping selection
   - Real-time price calculation
-  - Visual pizza preview
 
 - 📚 **Learn Mutation Testing**
   - Built-in examples of mutation testing concepts
   - Tutorials and explanations
-  - Real-world testing scenarios
 
 - 💻 **Developer Experience**
   - 100% TypeScript code coverage
@@ -65,9 +63,8 @@ npm run test:mutation
 
 Mutation testing helps ensure your test suite's effectiveness by introducing small code changes ("mutants") and verifying if your tests catch them. Learn more:
 
-- [Introduction to Mutation Testing](docs/mutation-testing.md)
+- [Introduction to Mutation Testing](https://medium.com/@german.cano/mutation-testing-mejora-la-efectividad-de-tus-tests-7838088c45efd)
 - [Example Mutations](docs/example-mutations.md)
-- [Testing Best Practices](docs/testing-practices.md)
 
 ## 🤝 Contributing
 
